@@ -1,0 +1,27 @@
+function mostrarNombre() {
+    const nombre = localStorage.getItem("nombre");
+    const ciudad = localStorage.getItem("ciudad");
+    const saludo = document.getElementById("saludo");
+
+    if (nombre === null) {
+        saludo.textContent = "No hay ningún nombre guardado.";
+    } else if (ciudad === null || ciudad === "") {
+        saludo.textContent = "Hola, " + nombre;
+    } else {
+        saludo.textContent = "Hola, " + nombre + ", de " + ciudad;
+    }
+}
+
+function borrar() {
+    localStorage.removeItem("nombre");
+    mostrarNombre();
+}
+
+function borrarTodo() {
+    localStorage.clear();
+    mostrarNombre();
+}
+
+document.addEventListener("DOMContentLoaded", mostrarNombre);
+document.getElementById("btn-borrar").addEventListener("click", borrar);
+document.getElementById("btn-borrar-todo").addEventListener("click", borrarTodo); ë

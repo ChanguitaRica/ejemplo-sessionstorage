@@ -1,0 +1,82 @@
+:root {
+    --color-principal: #2563eb;
+    --color-oscuro: #1e3a8a;
+    --color-texto: #1f2937;
+    --radio: 12px;
+}
+
+html {
+    min-height: 100%;
+    background: linear-gradient(180deg, #93c5fd 0%, #bfdbfe 45%, #eff6ff 100%);
+    background-attachment: fixed;
+}
+
+body {
+    font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+    color: var(--color-texto);
+    width: min(480px, calc(100% - 32px));
+    margin: 40px auto;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: var(--color-oscuro);
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid #93c5fd;
+    border-radius: var(--radio);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid var(--color-principal);
+}
+
+button, .enlace-boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 6px 4px;
+    border-radius: var(--radio);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .enlace-boton:hover {
+    background-color: var(--color-oscuro);
+}
+
+a {
+    display: block;
+    margin-top: 16px;
+    color: var(--color-oscuro);
+}
+
+#error {
+    color: #b91c1c;
+    min-height: 1.2em;
+}
+
+#saludo {
+    font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
