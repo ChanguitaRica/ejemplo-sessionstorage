@@ -1,6 +1,6 @@
 function mostrarNombre() {
-    const nombre = localStorage.getItem("nombre");
-    const ciudad = localStorage.getItem("ciudad");
+    const nombre = sessionStorage.getItem("nombre");
+    const ciudad = sessionStorage.getItem("ciudad");
     const saludo = document.getElementById("saludo");
 
     if (nombre === null) {
@@ -13,12 +13,12 @@ function mostrarNombre() {
 }
 
 function borrar() {
-    localStorage.removeItem("nombre");
+    sessionStorage.removeItem("nombre");
     mostrarNombre();
 }
 
 function borrarTodo() {
-    localStorage.clear();
+    sessionStorage.clear();
     mostrarNombre();
 }
 
